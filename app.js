@@ -14,7 +14,8 @@ app.use("/wiki", wikiRoutes);
 app.use("/users", usersRoutes);
 
 app.get("/", (req, res) => {
-  res.send(mainPage(""));
+
+    res.redirect('/wiki');
 });
 
 db.authenticate().then(() => {
